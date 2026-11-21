@@ -1,0 +1,42 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>네이버 API 키 받는 법 | LIEN</title><meta name="description" content="네이버 검색 API 키, 예전 블로그 글대로 따라 하면 이제 받을 수 없어요 🔑">
+<meta property="og:title" content="네이버 API 키 받는 법 | LIEN"><meta property="og:description" content="네이버 검색 API 키, 예전 블로그 글대로 따라 하면 이제 받을 수 없어요 🔑"><meta property="og:image" content="https://workerholic2026.github.io/Lien/reels/naver-api/cover.jpg">
+<link rel="icon" href="../../icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css"></head><body><div class="wrap"><div class="bar"><a class="back" href="../../">‹ 처음으로</a><svg viewBox="0 0 120 104" width="46" xmlns="http://www.w3.org/2000/svg" aria-label="LIEN"><path d="M14 58 A46 46 0 0 1 106 58" fill="none" stroke="#181A16" stroke-width="6"/><text x="60" y="100" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#181A16">LIEN</text></svg><span style="width:70px"></span></div><span class="tag">릴스</span><h2>네이버 API 키 받는 법</h2><div class="meta">2026-11-21</div><video src="reel.mp4" poster="cover.jpg" controls playsinline preload="metadata" style="width:100%;border-radius:16px;background:#000"></video><div class="btns solo"><a class="b1" href="https://www.instagram.com/reel/Df_92CRjX2_/">인스타에서 보기</a></div><div class="sec"><div class="st">따라 하기 자료</div></div><a class="it" href="../../jaryo/2026-11-21-naver-api-key/"><span class="ic">🔑</span><div><b>네이버 검색 API 키, 새로 받는 법과 주의할 점</b><i>바뀐 곳 · 받는 순서 · 무료 한도 · 키 지키기 · 약관</i></div></a><div class="cap">네이버 검색 API 키, 예전 블로그 글대로 따라 하면 이제 받을 수 없어요 🔑
+받는 곳과 방법이 바뀌었는데, 아직 옛날 방식 글이 많이 돌고 있어서 정리했어요.
+
+📌 네이버 검색 API 키로 할 수 있는 일
+API 키는 내 프로그램이 네이버 검색을 쓸 수 있게 해 주는 출입증이에요. 네이버 클라우드 공식 문서에 나온 목록 기준으로 뉴스·블로그·카페글·지식iN·지역 검색, 검색어 트렌드(어떤 말이 언제 많이 검색됐나), 쇼핑인사이트(분야·연령·성별별 인기 검색어)를 쓸 수 있어요.
+예를 들어 우리 업종 최신 뉴스 제목 모으기, 우리 제품 후기 글 흐름 보기, 「에어컨 청소」가 몇 월에 많이 찾아지는지 보기 같은 일을 자동으로 할 수 있어요.
+
+📌 왜 옛날 방법이 안 되나요
+예전에는 「네이버 개발자센터」에서 키를 받았어요. 보도에 따르면 2026년 7월 말 개발자센터의 검색 API 새 신청이 끝났고, 쇼핑·책·전문자료 검색은 종료됐어요. 그래서 「쇼핑 최저가 자동 확인」 같은 옛 글 내용은 지금 할 수 없어요.
+네이버 클라우드 공식 이관 안내에도 「개발자센터에서 쓰던 키는 API 허브에서 쓸 수 없다」고 적혀 있어요. 이미 받은 키도 2027년 6월 30일까지만 쓸 수 있다는 안내 메일이 있었다고 해요.
+
+📌 지금 받는 곳: 네이버 클라우드 플랫폼 「API 허브」
+네이버 클라우드 플랫폼은 네이버의 회사용 서비스 모음이고, API 허브는 그 안의 서비스 하나예요.
+① 네이버 클라우드 플랫폼 가입 후 콘솔 접속
+② 전체 서비스 → NAVER API HUB → 이용 신청 (약관 동의)
+③ Application 등록 → 쓸 검색 고르기 → 이름 입력 (영문·숫자·하이픈 20자까지)
+④ Application 목록의 「인증 정보」를 누르면 Client ID·Client Secret 두 개가 나와요
+가입할 때 결제 카드 등록을 요구했다는 후기도 있어요. 공식 문서엔 없는 내용이라 가입 화면에서 확인해 주세요.
+
+📌 무료 사용량
+공식 문서 기준 검색은 하루 25,000회, 한 달 775,000회까지예요. 검색어 트렌드·쇼핑인사이트는 각각 한 달 50,000회.
+지금은 「한시적 무료」이고, 유료로 바뀔 땐 미리 공지한다고 적혀 있어요. 한도에 닿으면 호출이 자동으로 막혀요.
+
+⚠️ 꼭 주의할 점
+・키 두 개는 비밀번호와 같아요. 메신저·화면 캡처에 보이지 않게 하고, 새어 나갔다면 인증 정보 창에서 다시 발급받으세요 (공식 안내)
+・2026년 9월 검색 API 약관이 바뀌어 「검색 결과를 AI에 넣거나 학습에 쓰는 것」, 결과 저장·재판매 등을 막았다는 보도가 여럿 있어요. 약관 원문을 꼭 확인하고 쓰세요
+
+💬 댓글에 「자료」라고 남겨 주시면 화면 순서 그대로 발급 방법을 DM으로 보내 드려요
+
+출처
+・네이버 클라우드 공식 문서 「NAVER API HUB 개요」「Application」「이관 가이드」
+・한국데이터경제신문·뉴스웨이 (2026.09) 개발자센터 이관·약관 개정 보도
+
+#네이버API #네이버검색API #API허브 #네이버클라우드 #업무자동화</div>
+<div class="foot">LIEN · 당신에게 꼭 필요한 AI 소식과 꿀팁<br><a href="https://www.instagram.com/ai_lien_news/">@ai_lien_news</a></div></div></body></html>
