@@ -1,0 +1,23 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>클로드 모델·생각 깊이 일별 추천표 (앤트로픽 공식 기준) | LIEN</title><meta name="description" content="모델 4개 · effort 5단계 · 기본값 · 일별 조합 · 클로드 코드에서 바꾸는 법">
+<meta property="og:title" content="클로드 모델·생각 깊이 일별 추천표 (앤트로픽 공식 기준) | LIEN"><meta property="og:description" content="모델 4개 · effort 5단계 · 기본값 · 일별 조합 · 클로드 코드에서 바꾸는 법">
+<link rel="icon" href="../../icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css"></head><body><div class="wrap"><div class="bar"><a class="back" href="../../">‹ 자료실</a><svg viewBox="0 0 120 104" width="46" xmlns="http://www.w3.org/2000/svg" aria-label="LIEN"><path d="M14 58 A46 46 0 0 1 106 58" fill="none" stroke="#181A16" stroke-width="6"/><text x="60" y="100" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#181A16">LIEN</text></svg><span style="width:70px"></span></div><span class="tag">따라 하기 자료</span><h2>클로드 모델·생각 깊이 일별 추천표 (앤트로픽 공식 기준)</h2><div class="meta">2026-11-23</div><div class="exp"><b>지금 모델 4개 (공식 문서 기준)</b><p>· 하이쿠 5.5: 가장 빠르고 쌈. 분류·정보 뽑기·나눠 보내기처럼 양 많고 빨라야 하는 일. 기본 깊이 medium
+· 소넷 5.5: 속도와 똑똑함의 균형. 대화·짧은 일·잘 정해진 일. 기본 깊이 high
+· 오퍼스 5.5: 오래 걸리는 코딩·지식 업무. 앤트로픽이 권하는 출발점. 기본 깊이 medium
+· 페이블 5.2: 누구나 쓸 수 있는 모델 중 가장 똑똑함. 아주 어려운 추론·오래 혼자 이어 가는 일. 기본 깊이 high. 값이 가장 비쌈</p></div><div class="exp"><b>생각 깊이(effort) 5단계</b><p>low → medium → high → xhigh → max. 높을수록 꼼꼼하지만 느리고 사용량이 늘어요. 공식 문서는 이것을 「정확한 한도가 아니라 행동 신호」라고 설명해요. max 는 「한계를 재 볼 때」 쓰고, 얻는 게 작을 때가 많다고 해요.</p></div><div class="step"><span class="n">1</span><div><b>출발은 오퍼스 5.5</b><i>공식 안내: 대부분의 일은 오퍼스 5.5에서 시작해요. 결과가 아쉬우면 모델보다 깊이를 먼저 올려요.</i></div></div><div class="step"><span class="n">2</span><div><b>깊이부터 조절</b><i>공식 문장: 「모델을 바꾸는 것보다 effort 를 조절하는 게 더 나은 경우가 많다」. 충분하면 깊이를 낮춰 아끼고, 부족하면 high → xhigh 로 올려요.</i></div></div><div class="step"><span class="n">3</span><div><b>그래도 부족하면 페이블 5.2</b><i>오퍼스 5.5를 xhigh 나 max 로 올려도 부족할 때 페이블 5.2로 넘어가라고 안내해요.</i></div></div><div class="exp"><b>일별 추천 조합</b><p>· 번역·요약·분류를 대량으로: 하이쿠 5.5 + low~medium
+· 가벼운 대화·질문·말투 다듬기: 소넷 5.5 + low~medium
+· 블로그·보고서·기획서 쓰기: 오퍼스 5.5 + medium(기본)
+· 잘 정해진 코딩 일: 소넷 5.5 + medium, 어려우면 high
+· 긴 코딩·여러 단계 자동화: 오퍼스 5.5 + high~xhigh
+· 수학·어려운 분석·큰 계획: 오퍼스 5.5 + xhigh → 부족하면 페이블 5.2
+· 가장 어려운 장기 작업: 페이블 5.2 + high, 효과를 확인한 경우만 xhigh
+(공식 문서의 모델별 권장 출발점을 바탕으로 정리한 추천이에요. 내 일에 직접 비교해 보고 조절하세요)</p></div><div class="exp"><b>클로드 코드에서 바꾸는 법</b><p>클로드 코드 창에 /model 을 입력하면 모델을 고르는 목록이 나와요. 생각 깊이는 /effort 뒤에 단계를 붙여 바꿔요.</p></div><div class="q"><div class="qt">예시</div><div class="qb">/model
+/effort high</div><button class="cp" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent);this.textContent='복사됨'">복사</button></div><div class="warn"><b>⚠️ 알아 둘 것</b><p>· 모델 이름 뒤 숫자(5.5, 5.2)가 버전이에요. 예전 글은 4.x 기준인 경우가 많으니 날짜를 확인하세요
+· 기본값과 지원 단계는 바뀔 수 있어요. 공식 문서 platform.claude.com 의 「모델 개요」를 기준으로 보세요</p></div><div class="exp"><b>공식 문서 바로 가기</b><p>· 모델 개요 (모델 이름·버전·기본 깊이): https://platform.claude.com/docs/ko/about-claude/models/overview
+· 모델 고르기 (어떤 모델로 시작할지): https://platform.claude.com/docs/ko/about-claude/models/choosing-a-model
+· 생각 깊이 effort (단계와 모델별 권장): https://platform.claude.com/docs/ko/build-with-claude/effort</p></div>
+<div class="foot">LIEN · 당신에게 꼭 필요한 AI 소식과 꿀팁<br><a href="https://www.instagram.com/ai_lien_news/">@ai_lien_news</a></div></div></body></html>
