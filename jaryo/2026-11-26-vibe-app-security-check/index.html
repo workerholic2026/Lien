@@ -1,0 +1,49 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI로 만든 앱 보안 점검 — 해커가 해 보는 14가지와 점검 요청문 | LIEN</title><meta name="description" content="14가지 점검표 · AI에게 맡기는 점검 요청문 · 하나씩 고치는 법">
+<meta property="og:title" content="AI로 만든 앱 보안 점검 — 해커가 해 보는 14가지와 점검 요청문 | LIEN"><meta property="og:description" content="14가지 점검표 · AI에게 맡기는 점검 요청문 · 하나씩 고치는 법">
+<link rel="icon" href="../../icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css"></head><body><div class="wrap"><div class="bar"><a class="back" href="../../">‹ 자료실</a><svg viewBox="0 0 120 104" width="46" xmlns="http://www.w3.org/2000/svg" aria-label="LIEN"><path d="M14 58 A46 46 0 0 1 106 58" fill="none" stroke="#181A16" stroke-width="6"/><text x="60" y="100" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#181A16">LIEN</text></svg><span style="width:70px"></span></div><span class="tag">따라 하기 자료</span><h2>AI로 만든 앱 보안 점검 — 해커가 해 보는 14가지와 점검 요청문</h2><div class="meta">2026-11-26</div><div class="exp"><b>왜 필요한가요?</b><p>AI 도구는 「돌아가는 앱」은 잘 만들지만, 시키지 않으면 「뚫리지 않는 앱」까지 챙기지 않아요. 웹 보안 단체 OWASP가 발표한 2025년 위험 10가지에서도 1위는 「권한 확인 실패」(주인이 맞는지 서버가 확인하지 않는 문제)였어요.</p></div><div class="exp"><b>나도 해당되나요?</b><p>· 로그인·회원·주문·결제·관리자 화면이 있다 → 14가지 전부
+· 랜딩 페이지 하나뿐인데 AI·지도·결제 같은 서비스 키를 쓴다 → 3번·13번은 꼭
+· 깃허브에 코드를 올린 적이 있다 → 13번은 꼭</p></div><div class="exp"><b>해커가 해 보는 14가지 (→ 막는 법)</b><p>1. 주소에 /admin 쳐 보기
+   → 관리자 화면은 서버가 로그인·관리자 권한을 확인. 메뉴 숨기기는 막은 게 아님
+2. 주소 끝 숫자 바꾸기
+   → 보기·고치기·지우기마다 「이 정보의 주인이 지금 사람인가」를 서버가 확인
+3. 화면 코드에서 비밀 키 찾기
+   → 비밀 키는 서버에만. NEXT_PUBLIC_·VITE_ 처럼 공개되는 이름에 넣지 않기
+4. 가격 고쳐서 주문
+   → 가격은 서버가 상품 정보에서 다시 계산
+5. 수량을 -1개로 주문
+   → 숫자 범위(1개 이상, 최대 몇 개)를 서버가 확인
+6. 가짜 결제 완료 보내기
+   → 결제 회사가 보낸 알림인지 서명 확인 + 금액 다시 맞춰 보기
+7. 쿠폰을 동시에 100번 누르기
+   → 동시에 눌러도 한 번만 쓰이게
+8. 가입하면서 관리자로 끼워 넣기
+   → 가입 때 받을 칸만 골라서 저장
+9. 인증번호 계속 맞혀 보기
+   → 시도 횟수 제한 + 시간 지나면 무효 + 한 번 쓰면 끝
+10. AI 상담창에 「지시 무시해」 넣기
+   → AI가 쓰는 기능도 그 사용자의 권한 안에서만
+11. 닉네임에 스크립트 넣기
+   → 화면에 보여 줄 때 글자로만 바꿔서(이스케이프) 출력
+12. 사진 대신 다른 파일 올리기
+   → 파일 종류·내용·크기를 서버가 확인
+13. 깃허브 기록에서 설정 파일(.env) 찾기
+   → .gitignore 에 넣기 + 이미 올라간 키는 폐기하고 새로 발급
+14. 데이터베이스에 바로 요청 보내기
+   → 값은 따로 넘기기(파라미터 바인딩) + 행 단위 권한(RLS) 켜기</p></div><div class="step"><span class="n">1</span><div><b>코딩 AI를 내 앱 폴더에서 열기</b><i>클로드 코드·커서·코덱스 중 쓰는 것을 열고, 꼭 내 앱 프로젝트 폴더에서 시작해요. 다른 폴더에서 열면 엉뚱한 코드를 봐요.</i></div></div><div class="step"><span class="n">2</span><div><b>점검 요청문 붙여 넣기</b><i>아래를 통째로 복사해 보내요.
+
+「너는 웹 서비스 보안 점검 담당이야. 이 프로젝트 코드를 읽고, 아래 14가지 공격이 실제로 통하는지 점검해 줘.
+규칙: ① 내가 「N번 고쳐 줘」라고 하기 전까지 파일을 고치지 마. ② 짐작하지 말고 근거로 판단하고, 항목마다 관련 파일과 줄 번호를 적어. ③ 그 기능이 없으면 「해당 없음」. ④ 화면(브라우저)에서만 막은 건 막은 걸로 치지 마. 공격하는 사람은 화면을 건너뛰고 서버에 바로 요청할 수 있어.
+점검 항목: (위 14가지를 그대로 붙여 넣기)
+결과는 표로: 번호 | 항목 | 안전/위험/해당 없음 | 근거 파일·줄 | 고치는 법 한 줄. 마지막에 「지금 당장 고칠 것 3개」를 골라 줘.」</i></div></div><div class="step"><span class="n">3</span><div><b>결과 표 읽기</b><i>「위험」 줄만 보면 돼요. 표 아래 「지금 당장 고칠 것 3개」부터 시작해요.</i></div></div><div class="step"><span class="n">4</span><div><b>하나씩 고치고 확인</b><i>「2번 고쳐 줘. 고친 다음 내가 직접 확인하는 방법도 알려 줘.」
+→ 앱이 잘 돌아가는지 확인 → 다음 번호.
+한 번에 14개를 다 고치라고 하면 어디서 고장 났는지 찾기 어려워요.</i></div></div><div class="warn"><b>⚠️ 꼭 알아 두세요</b><p>· 키가 한 번이라도 깃허브에 올라갔다면 코드에서 지우는 걸로 끝나지 않아요. 그 키는 폐기하고 새로 발급해요(깃허브 공식 안내도 이걸 가장 먼저 하라고 해요)
+· AI 점검은 코드를 읽고 판단하는 것이라 놓칠 수 있어요. 돈이 오가는 서비스라면 전문가 점검도 받아 보세요
+· 남의 사이트에 이 방법을 시험하면 안 돼요. 내 앱에만 해요</p></div><div class="exp"><b>공식 주소</b><p>· OWASP 위험 10가지 2025 — 권한 확인 실패: https://owasp.org/Top10/2025/A01_2025-Broken_Access_Control/
+· 넥스트JS 환경 변수 안내: https://nextjs.org/docs/app/guides/environment-variables
+· 깃허브 민감한 정보 지우기: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository</p></div>
+<div class="foot">LIEN · 당신에게 꼭 필요한 AI 소식과 꿀팁<br><a href="https://www.instagram.com/ai_lien_news/">@ai_lien_news</a></div></div></body></html>

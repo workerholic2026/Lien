@@ -1,0 +1,35 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>연결 안 되던 프로그램을 클로드에 연결하기 — CLI-Anything 설치부터 말로 시키기까지 | LIEN</title><meta name="description" content="준비물 · 설치 2줄 · 이미 만든 연결 도구 받기 · 새로 만들기 · 말로 시키기 · 막혔을 때">
+<meta property="og:title" content="연결 안 되던 프로그램을 클로드에 연결하기 — CLI-Anything 설치부터 말로 시키기까지 | LIEN"><meta property="og:description" content="준비물 · 설치 2줄 · 이미 만든 연결 도구 받기 · 새로 만들기 · 말로 시키기 · 막혔을 때">
+<link rel="icon" href="../../icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style.css"></head><body><div class="wrap"><div class="bar"><a class="back" href="../../">‹ 자료실</a><svg viewBox="0 0 120 104" width="46" xmlns="http://www.w3.org/2000/svg" aria-label="LIEN"><path d="M14 58 A46 46 0 0 1 106 58" fill="none" stroke="#181A16" stroke-width="6"/><text x="60" y="100" text-anchor="middle" font-family="Arial Black, Arial" font-weight="900" font-size="38" fill="#181A16">LIEN</text></svg><span style="width:70px"></span></div><span class="tag">따라 하기 자료</span><h2>연결 안 되던 프로그램을 클로드에 연결하기 — CLI-Anything 설치부터 말로 시키기까지</h2><div class="meta">2026-11-24</div><div class="exp"><b>이게 뭔가요?</b><p>CLI-Anything은 홍콩대학교 데이터 연구실(HKUDS)이 무료로 공개한 도구예요. 커넥터가 없는 내 컴퓨터 프로그램(블렌더·OBS·김프 등)을 글자 명령으로 움직이는 연결 도구를 클로드가 직접 만들게 해 줘요. 연결되면 우리는 말로만 시키면 돼요.</p></div><div class="exp"><b>준비물 (처음 한 번만)</b><p>· 클로드 앱 (claude.com/download) — 앱 안의 Code 탭을 써요. 유료 요금제 필요
+· 파이썬 3.10 이상 (python.org) — 설치할 때 「PATH 추가」 칸을 꼭 체크
+· 윈도우만: Git for Windows (git-scm.com) — 기본 설정 그대로 설치. 맥은 필요 없어요
+· 연결할 프로그램이 내 컴퓨터에 깔려 있어야 해요
+· 다 설치했으면 클로드 앱을 껐다가 다시 켜요</p></div><div class="step"><span class="n">1</span><div><b>CLI-Anything 설치</b><i>클로드 앱 Code 탭에서 새 세션을 열고, 채팅창에 아래 두 줄을 한 줄씩 보내요. (터미널이 아니라 채팅창!)
+
+/plugin marketplace add HKUDS/CLI-Anything
+/plugin install cli-anything
+
+새 세션을 하나 더 열고 /cli 까지 입력했을 때 cli-anything 명령이 보이면 끝이에요.</i></div></div><div class="step"><span class="n">2</span><div><b>이미 만들어진 연결 도구 받기</b><i>CLI-Hub(https://hkuds.github.io/CLI-Anything/)에서 프로그램 이름을 찾은 뒤, 채팅창에 이렇게 보내요. blender 자리만 바꾸면 돼요.
+
+「pip install cli-anything-hub 로 CLI-Hub를 설치하고, cli-hub install blender 로 블렌더 연결 도구를 설치해줘. 설치가 끝나면 내 컴퓨터의 블렌더를 찾는지 확인해줘.」
+
+있는 것 예시: blender · gimp · inkscape · krita · obs-studio · audacity · kdenlive · shotcut · libreoffice · obsidian · zotero · drawio · comfyui · ollama · n8n</i></div></div><div class="step"><span class="n">3</span><div><b>없으면 새로 만들기</b><i>명령 뒤에 한 칸 띄우고 프로그램의 깃허브 주소(또는 내 컴퓨터의 프로그램 폴더 경로)를 붙여 보내요.
+
+/cli-anything:cli-anything https://github.com/k4yt3x/video2x
+
+클로드가 코드 분석 → 설계 → 만들기 → 시험 계획 → 시험 작성 → 시험 실행 → 설치, 7단계를 혼자 진행해요. 중간에 허락을 물으면 확인하고 승인해요. 오래 걸리고(예: 약 23분) 사용량도 많이 써요.</i></div></div><div class="step"><span class="n">4</span><div><b>말로 일 시키기</b><i>· 「블렌더 연결 도구로 원숭이 모형 하나 넣고 초록색으로 칠해줘. 바닥은 크림색, 조명·카메라 넣어서 1080×1350 그림으로 렌더해줘. 파일이 실제로 만들어졌는지 확인해줘.」
+· 「Video2X 연결 도구로 이 사진을 4배로 키워서 after.png 로 저장하고 원본과 비교 그림도 만들어줘.」</i></div></div><div class="warn"><b>⚠️ 막혔을 때 (윈도우)</b><p>· /plugin 오류 → 터미널 말고 Code 탭 채팅창에 넣기
+· /cli 목록에 안 보임 → 새 세션 열기, 그래도 없으면 /reload-plugins
+· cygpath: command not found → Git for Windows 설치 후 앱 다시 켜기
+· pip·python 못 찾음 → 「파이썬 설치돼 있는지 확인해줘」라고 말하기
+· 블렌더가 그림을 안 만듦 → 「블렌더를 백그라운드로 직접 실행해서 그림 파일까지 만들어줘」
+· Unknown skill: cli-anything → /reload-plugins, 안 되면 1단계 다시</p></div><div class="warn"><b>⚠️ 꼭 알아 두세요</b><p>· 연결 도구는 내 컴퓨터에서 명령을 직접 실행해요. 믿을 수 있는 프로그램만 연결하고 중요한 파일은 복사본부터
+· 목록에 있는 프로그램이면 2단계가 훨씬 빨라요</p></div><div class="exp"><b>공식 주소</b><p>· CLI-Anything 깃허브: https://github.com/HKUDS/CLI-Anything
+· CLI-Hub: https://hkuds.github.io/CLI-Anything/
+· 참고한 한국어 안내: https://nookitokki.co.kr/connect-guide</p></div>
+<div class="foot">LIEN · 당신에게 꼭 필요한 AI 소식과 꿀팁<br><a href="https://www.instagram.com/ai_lien_news/">@ai_lien_news</a></div></div></body></html>
